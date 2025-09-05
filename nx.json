@@ -23,6 +23,11 @@
     }
   ],
   "release": {
-    "projects": ["packages/*"]
+    "projects": ["packages/*"],
+    "projectsRelationship": "independent",
+    "changelog": {
+      "projectChangelogs": true,
+      "workspaceChangelog": true
+    }
   }
 }
