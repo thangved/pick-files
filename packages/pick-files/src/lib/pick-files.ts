@@ -1,8 +1,23 @@
-import { PickFileResult, PickFilesOptions } from './types';
+import { PickFilesError, PickFilesOptions, PickFilesResult } from './types';
 
 const DEFAULT_OPTIONS: PickFilesOptions = {
   accept: '*',
   multiple: false,
+};
+
+const normalizeOptions = (
+  options: PickFilesOptions
+): {
+  accept: string;
+} & Pick<PickFilesOptions, 'multiple' | 'maxSize'> => {
+  return {
+    ...options,
+    accept:
+      typeof options.accept === 'string'
+        ? options.accept
+        : options.accept.join(', '),
+    multiple: false,
+  };
 };
 
 /**
@@ -12,9 +27,13 @@ const DEFAULT_OPTIONS: PickFilesOptions = {
  */
 export const pickFiles = async (
   options?: Partial<PickFilesOptions>
-): Promise<PickFileResult> => {
-  const { accept, multiple } = { ...DEFAULT_OPTIONS, ...options };
-  return new Promise<PickFileResult>((resolve, reject) => {
+): Promise<PickFilesResult> => {
+  const { accept, multiple, maxSize } = normalizeOptions({
+    ...DEFAULT_OPTIONS,
+    ...options,
+  });
+
+  return new Promise<PickFilesResult>((resolve, reject) => {
     const input = document.createElement('input');
     input.type = 'file';
     input.multiple = multiple;
@@ -22,15 +41,34 @@ export const pickFiles = async (
 
     input.addEventListener('input', () => {
       try {
-        if (!input.files?.length) throw new Error('No file selected');
-        resolve({ files: Array.from(input.files) });
+        if (!input.files?.length)
+          throw new Error('No file selected', {
+            cause: PickFilesError.NoFileSelected,
+          });
+
+        const files = Array.from(input.files);
+
+        // Check file size
+        if (typeof maxSize === 'number')
+          files.forEach((file) => {
+            if (maxSize > file.size)
+              throw new Error('File size too large', {
+                cause: PickFilesError.FileSizeTooLarge,
+              });
+          });
+
+        resolve({ files });
       } catch (error) {
         reject(error);
       }
     });
 
     input.addEventListener('cancel', () => {
-      reject(new Error('User cancel action'));
+      reject(
+        new Error('User cancel action', {
+          cause: PickFilesError.UserCanceledAction,
+        })
+      );
     });
 
     input.click();

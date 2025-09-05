@@ -6,9 +6,9 @@
 
 - [x] Supports multiple file selection.
 - [x] Customizable file types
-- [ ] Easy to integrate and use.
-- [ ] Customizable file size limits
-- [ ] Validation file types and sizes
+- [x] Customizable file size limits
+- [x] Easy to integrate and use.
+- [ ] Validation file types
 
 ## Installation
 
@@ -35,7 +35,12 @@ const handleFileSelection = async () => {
   try {
     const { files } = await pickFiles({
       multiple: true,
-      accept: '*',
+      accept: '*', // Accept all file types
+
+      //Or specify file types
+      // accept: ['image/*', '.pdf', '.docx'],
+
+      maxSize: 5 * 1024 * 1024, // 5MB
     });
     console.log('Selected files:', files);
   } catch (error) {
