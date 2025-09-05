@@ -1,12 +1,4 @@
 {
-  "name": "@pick-files/source",
-  "version": "0.0.0",
-  "license": "MIT",
-  "scripts": {
-    "build": "nx run-many --target=build --all --parallel",
-    "dev": "nx run-many --target=dev --all --parallel"
-  },
-  "private": false,
   "dependencies": {},
   "devDependencies": {
     "@nx/js": "21.4.1",
@@ -18,6 +10,18 @@
     "tslib": "^2.3.0",
     "typescript": "~5.8.2"
   },
+  "license": "MIT",
+  "name": "@pick-files/source",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thangved/pick-files"
+  },
+  "scripts": {
+    "build": "nx run-many --target=build --all --parallel",
+    "dev": "nx run-many --target=dev --all --parallel"
+  },
+  "version": "0.0.0",
   "workspaces": [
     "packages/*"
   ]
