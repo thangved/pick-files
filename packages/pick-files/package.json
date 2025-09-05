@@ -5,7 +5,7 @@
     "url": "https://profile.thangved.com"
   },
   "browser": "./dist/esm/index.js",
-  "description": "",
+  "description": "A simple and efficient file picker library for web applications",
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.2",
     "tsup": "^8.5.0",
@@ -31,8 +31,10 @@
     "dist"
   ],
   "keywords": [
-    "File picker",
-    "Pick files"
+    "browser",
+    "js",
+    "file",
+    "file-picker"
   ],
   "license": "MIT",
   "main": "dist/cjs/index.js",

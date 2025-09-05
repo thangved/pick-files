@@ -5,6 +5,11 @@ const DEFAULT_OPTIONS: PickFilesOptions = {
   multiple: false,
 };
 
+/**
+ * Pick files
+ * @param options - Pick file options
+ * @returns Pick files result
+ */
 export const pickFiles = async (
   options?: Partial<PickFilesOptions>
 ): Promise<PickFileResult> => {
