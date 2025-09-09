@@ -1,3 +1,7 @@
+## 1.0.6-0 (2025-09-09)
+
+This was a version bump only for @thangved/pick-files to align it with other projects, there were no code changes.
+
 ## 1.0.5 (2025-09-06)
 
 This was a version bump only for @thangved/pick-files to align it with other projects, there were no code changes.
