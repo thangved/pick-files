@@ -2,7 +2,7 @@ import { defineConfig, Options } from 'tsup';
 import { name, version } from './package.json';
 
 const baseConfig: Options = {
-  entry: ['src/**/*.ts'],
+  entry: ['src/index.ts'],
   minify: true,
   sourcemap: false,
   splitting: false,
@@ -14,6 +14,7 @@ const baseConfig: Options = {
   },
   minifySyntax: true,
   platform: 'browser',
+  bundle: true,
 };
 
 export default defineConfig([
