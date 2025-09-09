@@ -95,7 +95,7 @@ function App() {
                     type: file.type,
                   })),
                   null,
-                  2
+                  2,
                 )}
               />
             </div>

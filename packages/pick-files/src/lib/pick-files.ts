@@ -6,7 +6,7 @@ const DEFAULT_OPTIONS: PickFilesOptions = {
 };
 
 const normalizeOptions = (
-  options: PickFilesOptions
+  options: PickFilesOptions,
 ): {
   accept: string;
 } & Pick<PickFilesOptions, 'multiple' | 'maxSize'> => {
@@ -26,7 +26,7 @@ const normalizeOptions = (
  * @returns Pick files result
  */
 export const pickFiles = async (
-  options?: Partial<PickFilesOptions>
+  options?: Partial<PickFilesOptions>,
 ): Promise<PickFilesResult> => {
   const { accept, multiple, maxSize } = normalizeOptions({
     ...DEFAULT_OPTIONS,
@@ -67,7 +67,7 @@ export const pickFiles = async (
       reject(
         new Error('User cancel action', {
           cause: PickFilesError.UserCanceledAction,
-        })
+        }),
       );
     });
 

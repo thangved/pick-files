@@ -54,7 +54,6 @@ const handleFileSelection = async () => {
 ### `pickFiles(options): Promise<{ files: File[] }>`
 
 - `options` (Object): Configuration options for file selection.
-
   - `multiple` (Boolean): Allow multiple file selection. Default is `false`.
   - `accept` (String): Comma-separated list of accepted file types. Default is `'*'`.
 
