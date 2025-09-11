@@ -24,14 +24,16 @@
   ],
   "release": {
     "changelog": {
-      "projectChangelogs": true,
-      "workspaceChangelog": true
+      "projectChangelogs": true
     },
     "git": {
       "commit": true,
       "push": true
     },
     "projects": ["packages/*"],
-    "projectsRelationship": "independent"
+    "projectsRelationship": "independent",
+    "version": {
+      "conventionalCommits": true
+    }
   }
 }
