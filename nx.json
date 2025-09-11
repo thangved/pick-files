@@ -27,6 +27,10 @@
       "projectChangelogs": true,
       "workspaceChangelog": true
     },
+    "git": {
+      "commit": true,
+      "push": true
+    },
     "projects": ["packages/*"],
     "projectsRelationship": "independent"
   }
