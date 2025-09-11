@@ -1,5 +1,7 @@
 # @thangved/pick-files
 
+[![install size](https://packagephobia.com/badge?p=@thangved/pick-files)](https://packagephobia.com/result?p=@thangved/pick-files)
+
 > A simple and efficient file picker library for web applications.
 
 ## Features
