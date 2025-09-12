@@ -1,3 +1,20 @@
+## 0.0.1-2 (2025-09-12)
+
+### 🚀 Features
+
+- **nx-cloud:** setup nx cloud workspace ([fea6d17](https://github.com/thangved/pick-files/commit/fea6d17))
+- **pick-files:** limit file size ([8b629cb](https://github.com/thangved/pick-files/commit/8b629cb))
+
+### 🩹 Fixes
+
+- **nx:** update nx config ([eae3fa0](https://github.com/thangved/pick-files/commit/eae3fa0))
+- **nx:** fix project id ([4a04485](https://github.com/thangved/pick-files/commit/4a04485))
+
+### ❤️ Thank You
+
+- Kim Minh Thang @thangved
+- Kim Minh Thắng @thangved
+
 ## 1.0.11-0 (2025-09-11)
 
 This was a version bump only for @thangved/pick-files to align it with other projects, there were no code changes.
