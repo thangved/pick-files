@@ -30,9 +30,6 @@
       "commit": true,
       "push": true
     },
-    "projects": ["packages/*"],
-    "version": {
-      "conventionalCommits": true
-    }
+    "projects": ["packages/*"]
   }
 }
