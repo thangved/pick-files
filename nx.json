@@ -31,7 +31,6 @@
       "push": true
     },
     "projects": ["packages/*"],
-    "projectsRelationship": "independent",
     "version": {
       "conventionalCommits": true
     }
