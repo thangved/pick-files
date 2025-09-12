@@ -1,3 +1,7 @@
+## 0.0.2-0 (2025-09-12)
+
+This was a version bump only for @thangved/pick-files to align it with other projects, there were no code changes.
+
 ## 0.0.1-2 (2025-09-12)
 
 ### 🚀 Features
