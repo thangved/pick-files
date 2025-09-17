@@ -1,3 +1,9 @@
+## 1.0.11-0 (2025-09-17)
+
+### 🩹 Fixes
+
+- **deps:** update dependency @thangved/pick-files to v1.0.10 ([87ab09e](https://github.com/thangved/pick-files/commit/87ab09e))
+
 ## 1.0.10 (2025-09-12)
 
 This was a version bump only, there were no code changes.

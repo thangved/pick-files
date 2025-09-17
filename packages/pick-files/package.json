@@ -50,7 +50,7 @@
   "sideEffects": false,
   "type": "module",
   "types": "./dist/esm/index.d.ts",
-  "version": "1.0.10",
+  "version": "1.0.11-0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thangved/pick-files.git",
