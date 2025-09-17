@@ -4,7 +4,6 @@
     "name": "Kim Minh Thang (@thangved)",
     "url": "https://profile.thangved.com"
   },
-  "browser": "./dist/esm/index.js",
   "description": "A simple and efficient file picker library for web applications",
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.2",
@@ -14,16 +13,16 @@
   "exports": {
     ".": {
       "browser": {
-        "default": "./dist/esm/index.js",
-        "types": "./dist/esm/index.d.ts"
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
       },
       "import": {
-        "default": "./dist/esm/index.js",
-        "types": "./dist/esm/index.d.ts"
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
       },
       "require": {
-        "default": "./dist/cjs/index.cjs",
-        "types": "./dist/cjs/index.d.cts"
+        "types": "./dist/cjs/index.d.cts",
+        "default": "./dist/cjs/index.cjs"
       }
     }
   },
@@ -37,7 +36,7 @@
     "file-picker"
   ],
   "license": "MIT",
-  "main": "dist/cjs/index.js",
+  "main": "dist/cjs/index.cjs",
   "name": "@thangved/pick-files",
   "private": false,
   "publishConfig": {
@@ -54,7 +53,7 @@
   "version": "1.0.10",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thangved/pick-files",
+    "url": "git+https://github.com/thangved/pick-files.git",
     "directory": "packages/pick-files"
   }
 }
